@@ -1,40 +1,23 @@
-<div class="login-wrapper">
-  <div class="login-content">
-    <div class="column info-column">
-      <h1>Sign into your account</h1>
-      <div class="update-container">
-        <h3 class="title">What's New</h3>
-        <hr/><a href="#">
-          <h4>New Product Title</h4></a>
-        <p>Morbi bibendum facilisis turpis in tempus. Integer erat elit, consectetur ac nisi sit amet, mollis pretium mi.</p>
+<div class="login">
+  <div class="banner"></div>
+  <div class="form">
+    <form class="wrapper" [formGroup]="login_form" novalidate (ngSubmit)="login(login_form.value, login_form.valid)">
+      <div class="row">
+        <div class="label">Correo electrónico</div>
+        <input type="email" placeholder="Correo electrónico" #email formControlName="email">
       </div>
-    </div>
-    <div class="column sign-column"><a class="g-sign" href="#">
-        <div class="button-container"><img class="g-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_&quot;G&quot;_Logo.svg"/>
-          <div class="button-content">Sign in with Google</div>
-        </div></a>
-      <div class="divider">
-        <div class="left"></div>or
-        <div class="right"></div>
+      <div class="row">
+        <div class="label">Contraseña</div>
+        <input type="password" placeholder="Contraseña" #password formControlName="password">
       </div>
-      <form>
-        <div class="input-group">
-          <label class="label" for="formEmail">Company Email</label>
-          <input class="input" type="email" id="formEmail" aria-describedby="emailHelp" placeholder="name@company.com"/>
-        </div>
-        <div class="input-group">
-          <label class="label" for="formPass">Password</label>
-          <input class="input" type="password" id="formPass" aria-describedby="passHelp" placeholder="Password"/>
-          <div class="formHelp">
-            <div class="form-check">
-              <label>
-                <input class="form-check-input" type="checkbox"/>Keep me signed in
-              </label>
-            </div><a class="helpPass" href="#">Forgot your password?</a>
-          </div>
-        </div>
-        <button class="form-button" type="submit">Sign in</button>
-      </form>
+      <div class="row">
+        <button type="submit" [disabled]="!login_form.valid">Iniciar</button>
+      </div>
+    </form>
+    <div class="signup">
+      <a (click)="verficar()" *ngIf="enviarcorreo">Verificar Ahora</a>
+      Olvidaste tu contracena?
+      <a [routerLink]="['/recuperar']">Recuperar Ahora</a>
     </div>
   </div>
 </div>
