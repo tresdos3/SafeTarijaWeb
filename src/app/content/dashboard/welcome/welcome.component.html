@@ -1,3 +1,69 @@
-<p>
-  welcome works!
-</p>
+<div class="body">
+  <div class="window window__osx">
+    <header class="window--header">
+      <div class="controls">
+        <button class="controls--button controls--button__close"> 
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
+        <button class="controls--button controls--button__min">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M19 13H5v-2h14v2z"/>
+          </svg>
+        </button>
+        <button class="controls--button controls--button__max">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M7.4 5l11.2 11V5m-2.8 13.8L4.6 7.8v11" />
+          </svg>
+        </button>
+      </div>
+      
+      <div class="sync-indicator">
+        <h6 class="sync-title"></h6>
+        <svg class="sync-progress" viewBox="0 0 48 48">
+          <circle cx="24" cy="24" r="20" fill="none"></circle>
+        </svg>
+      </div>
+    </header>
+    
+    <div class="window-content">  
+      <svg class="intro-logo" viewBox="0 0 172 173">
+        <path d="M40.93 83.44l-.13.12c6.65-18 4.9-31.85-5.27-41.54C20.3 27.5 19.63 30.44 10.4 28.48l.06-.04C4.52 26.82.16 21.4.16 14.94c0-7.74 6.25-14 14-14 7.42 0 13.5 5.8 13.96 13.1h.03c.78 8.18 5 15.6 12.65 22.22 11.44 9.9 20.5 11.57 36.3 7.56 8.34-3.73 17.6-5.8 27.32-5.8 37.04 0 67.06 30.02 67.06 67.05v55.06c0 6.63-5.37 12-12 12h-55.06c-37.04 0-67.06-30.02-67.06-67.06 0-7.57 1.26-14.85 3.57-21.63zm66.1 61.66h28.42c6.62 0 12-5.37 12-12v-28.43c0-22.33-18.1-40.43-40.43-40.43S66.6 82.34 66.6 104.67 84.7 145.1 107 145.1z" fill="#FFF" />
+      </svg>
+  
+      <div class="welcome-screen">
+        <h2 class="greeting" style="font-size: 2em;">Bienvenido SafeTarija.</h2>
+        <ul class="options">
+          <li class="option">
+            <label for="recoverWallet"></label>
+            <div class="option--icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M14 12c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2zm-2-9c-4.97 0-9 4.03-9 9H0l4 4 4-4H5c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.51 0-2.91-.49-4.06-1.3l-1.42 1.44C8.04 20.3 9.94 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/>
+              </svg>
+            </div>
+            <h4 class="option--title">Perfil.</h4>
+          </li>
+          <li class="option">
+            <label for="newWallet"></label>
+            <div class="option--icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <h4 class="option--title">Agregar Nuevo.</h4>
+          </li>
+          <li class="option">
+            <label for="newHost"></label>
+            <div class="option--icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M19.35 10.04C18.67 6.6 15.65 4 12 4 9.1 4 6.6 5.64 5.35 8.04 2.35 8.36 0 10.9 0 14c0 3.3 2.7 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.2 0-4-1.8-4-4s1.8-4 4-4h.7c.68-2.3 2.8-4 5.3-4 3.04 0 5.5 2.46 5.5 5.5v.5H19c1.66 0 3 1.34 3 3s-1.34 3-3 3z"/>
+              </svg>
+            </div>
+            <h4 class="option--title">Localizar</h4>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /window-content -->
+  </div>
+</div>

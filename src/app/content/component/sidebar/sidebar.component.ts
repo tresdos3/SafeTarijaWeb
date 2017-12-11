@@ -12,6 +12,7 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   { path: 'welcome', title: 'Bienvenido', icon: 'dashboard', class: '' },
   { path: 'profile', title: 'Perfil', icon: 'person_add', class: '' },
+  { path: 'track', title: 'Ubicar', icon: 'my_location', class: '' },
 ];
 @Component({
   selector: 'app-sidebar',

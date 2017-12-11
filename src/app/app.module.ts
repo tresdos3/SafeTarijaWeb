@@ -18,6 +18,8 @@ import { FooterComponent } from './content/component/footer/footer.component';
 import { SidebarComponent } from './content/component/sidebar/sidebar.component';
 import { WelcomeComponent } from './content/dashboard/welcome/welcome.component';
 import { ProfileComponent } from './content/dashboard/profile/profile.component';
+import { LocalizarComponent } from './content/dashboard/localizar/localizar.component';
+import { DataService } from './core/service/data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,8 @@ import { ProfileComponent } from './content/dashboard/profile/profile.component'
     FooterComponent,
     SidebarComponent,
     WelcomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    LocalizarComponent
   ],
   imports: [
     BrowserModule,
@@ -77,12 +80,16 @@ import { ProfileComponent } from './content/dashboard/profile/profile.component'
           {
             path: 'profile',
             component: ProfileComponent
+          },
+          {
+            path: 'track',
+            component: LocalizarComponent
           }
         ]
       }
     ])
   ],
-  providers: [AngularFireAuth, AuthService],
+  providers: [AngularFireAuth, AuthService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
