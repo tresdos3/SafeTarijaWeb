@@ -13,13 +13,19 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import { DashboardComponent } from './content/dashboard/dashboard.component';
 import { AuthService } from './core/service/auth.service';
+import { NavbarComponent } from './content/component/navbar/navbar.component';
+import { FooterComponent } from './content/component/footer/footer.component';
+import { SidebarComponent } from './content/component/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
     LostpasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
