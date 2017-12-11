@@ -1,4 +1,4 @@
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -10,12 +10,14 @@ import { LostpasswordComponent } from './content/lostpassword/lostpassword.compo
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
-import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { DashboardComponent } from './content/dashboard/dashboard.component';
 import { AuthService } from './core/service/auth.service';
 import { NavbarComponent } from './content/component/navbar/navbar.component';
 import { FooterComponent } from './content/component/footer/footer.component';
 import { SidebarComponent } from './content/component/sidebar/sidebar.component';
+import { WelcomeComponent } from './content/dashboard/welcome/welcome.component';
+import { ProfileComponent } from './content/dashboard/profile/profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { SidebarComponent } from './content/component/sidebar/sidebar.component'
     DashboardComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    WelcomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { SidebarComponent } from './content/component/sidebar/sidebar.component'
     RouterModule.forRoot([
       {
         path: '',
-        component: SigninComponent
+        component: SigninComponent,
+        pathMatch: 'full'
       },
       {
         path: 'signup',
@@ -58,7 +63,22 @@ import { SidebarComponent } from './content/component/sidebar/sidebar.component'
       },
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'welcome'
+          },
+          {
+            path: 'welcome',
+            component: WelcomeComponent
+          },
+          {
+            path: 'profile',
+            component: ProfileComponent
+          }
+        ]
       }
     ])
   ],
