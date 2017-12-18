@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './content/signin/signin.component';
 import { RouterModule } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 import { SignupComponent } from './content/signup/signup.component';
 import { LostpasswordComponent } from './content/lostpassword/lostpassword.component';
 import { AngularFireModule } from 'angularfire2';
@@ -20,6 +21,10 @@ import { WelcomeComponent } from './content/dashboard/welcome/welcome.component'
 import { ProfileComponent } from './content/dashboard/profile/profile.component';
 import { LocalizarComponent } from './content/dashboard/localizar/localizar.component';
 import { DataService } from './core/service/data.service';
+import { LocalizarpComponent } from './content/dashboard/localizarp/localizarp.component';
+import { NotificationService } from './core/service/notification.service';
+import { NotificationComponent } from './content/dashboard/notification/notification.component';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +37,14 @@ import { DataService } from './core/service/data.service';
     SidebarComponent,
     WelcomeComponent,
     ProfileComponent,
-    LocalizarComponent
+    LocalizarComponent,
+    LocalizarpComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyAboHBF8RZ2S7DS9XWKMc-JlTuU1Oaiuag',
@@ -46,9 +54,14 @@ import { DataService } from './core/service/data.service';
       storageBucket: 'sistemaq-f68e8.appspot.com',
       messagingSenderId: '1083800873164'
     }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBP8cVkhkY5rz0wC-DCopSUkxw8mICYOtg'
+    }),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     ToastModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -84,12 +97,20 @@ import { DataService } from './core/service/data.service';
           {
             path: 'track',
             component: LocalizarComponent
+          },
+          {
+            path: 'track/:id',
+            component: LocalizarpComponent
+          },
+          {
+            path: 'notification',
+            component: NotificationComponent
           }
         ]
       }
     ])
   ],
-  providers: [AngularFireAuth, AuthService, DataService],
+  providers: [AngularFireAuth, AuthService, DataService, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

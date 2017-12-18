@@ -13,6 +13,7 @@ export const ROUTES: RouteInfo[] = [
   { path: 'welcome', title: 'Bienvenido', icon: 'dashboard', class: '' },
   { path: 'profile', title: 'Perfil', icon: 'person_add', class: '' },
   { path: 'track', title: 'Ubicar', icon: 'my_location', class: '' },
+  { path: 'notification' , title: 'Mensajes', icon: 'message', class: ''}
 ];
 @Component({
   selector: 'app-sidebar',
