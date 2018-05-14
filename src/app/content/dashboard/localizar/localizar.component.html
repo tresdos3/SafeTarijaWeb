@@ -1,0 +1,56 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="red">
+            <h4 class="title">Lista de hijos</h4>
+          </div>
+          <div class="card-content">
+            <!-- <div class="flex-container">
+              <div class="task-col" *ngFor="let item of children"> -->
+            <div class="col-md-4" *ngFor="let item of children">
+              <a (click)="maps(item.$key)" style="cursor: pointer">
+                <div class='smartphone zoom-1 notification on'>
+                  <span class='btn btn-up-down'></span>
+                  <span class='btn btn-power'></span>
+                  <section class='header'>
+                    <span class='badge' *ngIf="item.alerta === 'si'"></span>
+                    <span class='cam'></span>
+                  </section>
+                  <div class='screen'>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img src="http://bulma.io/images/placeholders/96x96.png" alt="Image">
+                              </figure>
+                            </div>
+
+                          </div>
+                          <div class="col-md-9">
+                            <div class="media-content">
+                              <p class="title" style="font-size: 1rem;">Nombre: {{ item.nombre }}</p>
+                              <p class="title" style="margin-bottom: 0.5rem;font-size: 1rem;">Emergencia: {{ item.alerta}}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <agm-map [latitude]="item.ubicacion.latitud" [longitude]="item.ubicacion.longitud" [zoom]="zoom" class="grid-img">
+                      <h1>h11</h1>
+                      <agm-marker [latitude]="item.ubicacion.latitud" [longitude]="item.ubicacion.longitud"></agm-marker>
+                    </agm-map>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

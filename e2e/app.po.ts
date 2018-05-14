@@ -1,6 +1,10 @@
 import { browser, by, element } from 'protractor';
 
+<<<<<<< HEAD
 export class GdgPage {
+=======
+export class AppPage {
+>>>>>>> origin/master
   navigateTo() {
     return browser.get('/');
   }

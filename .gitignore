@@ -32,7 +32,10 @@
 npm-debug.log
 testem.log
 /typings
+<<<<<<< HEAD
 yarn-error.log
+=======
+>>>>>>> origin/master
 
 # e2e
 /e2e/*.js

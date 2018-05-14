@@ -11,11 +11,22 @@
       "check-space"
     ],
     "curly": true,
+<<<<<<< HEAD
+=======
+    "deprecation": {
+      "severity": "warn"
+    },
+>>>>>>> origin/master
     "eofline": true,
     "forin": true,
     "import-blacklist": [
       true,
+<<<<<<< HEAD
       "rxjs"
+=======
+      "rxjs",
+      "rxjs/Rx"
+>>>>>>> origin/master
     ],
     "import-spacing": true,
     "indent": [
@@ -126,6 +137,10 @@
       "app",
       "kebab-case"
     ],
+<<<<<<< HEAD
+=======
+    "no-output-on-prefix": true,
+>>>>>>> origin/master
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -134,9 +149,13 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
+<<<<<<< HEAD
     "directive-class-suffix": true,
     "no-access-missing-member": true,
     "templates-use-public": true,
     "invoke-injectable": true
+=======
+    "directive-class-suffix": true
+>>>>>>> origin/master
   }
 }

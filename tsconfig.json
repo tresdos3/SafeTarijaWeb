@@ -12,7 +12,11 @@
       "node_modules/@types"
     ],
     "lib": [
+<<<<<<< HEAD
       "es2016",
+=======
+      "es2017",
+>>>>>>> origin/master
       "dom"
     ]
   }

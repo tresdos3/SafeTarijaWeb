@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+<<<<<<< HEAD
     "name": "gdg"
+=======
+    "name": "safetarija"
+>>>>>>> origin/master
   },
   "apps": [
     {
@@ -20,9 +24,27 @@
       "prefix": "app",
       "styles": [
         "styles.css",
+<<<<<<< HEAD
         "../node_modules/ngx-toastr/toastr.css"
       ],
       "scripts": [],
+=======
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+        "./assets/sass/material-dashboard.scss",
+        "./assets/css/demo.css",
+        "./assets/css/ng2-toastr.min.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/bootstrap-material-design/dist/js/ripples.min.js",
+        "../node_modules/bootstrap-material-design/dist/js/material.min.js",
+        "../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
+        "../node_modules/arrive/src/arrive.js"
+      ],
+>>>>>>> origin/master
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
