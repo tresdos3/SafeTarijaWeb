@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="burger">
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+  </div>
+
+  <nav class="menu">
+    <div class="menu__brand">
+      <a href="">
+        <div class="logo"><img src="https://www.atomix.com.au/media/2015/06/atomix_user31.png" alt=""></div>
+      </a>
+      <h1 class="profile">Usuario: {{ DisplayName }}</h1>
+      <h2 class="profile">Estado: Activo</h2>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item"><a (click)="SignOut()" class="menu__link">Terminar Sesion</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>

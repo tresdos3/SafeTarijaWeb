@@ -1,0 +1,39 @@
+<div class="body">
+  <div class="container">
+    <button type="submit" class="btn" (click)="back()" style="margin-top: 20px; ">Regresar</button>
+    <div class="cover">
+      <h1>&lt;Tarija Segura
+        <span class="slash">/</span>&gt;</h1>
+      <h3>Envia un notificacion :)</h3>
+      <img src="../../assets/images/aaa.gif" alt="" style="max-width: 150px">
+    </div>
+    <div class="content-form">
+      <form class="form-not" novalidate [formGroup]="form" (ngSubmit)="registrar(form.value)">
+        <div class="field">
+          <label class="label">Titulo</label>
+          <p class="control has-icon has-icon-right">
+            <input class="input" type="text" placeholder="Ingrese un titulo" formControlName="titulo">
+            <span class="icon is-small">
+              <i class="fa fa-check"></i>
+            </span>
+          </p>
+          <p class="help is-success" *ngIf="!form.get('titulo').hasError('required')">Perfecto!</p>
+          <p class="help is-danger" *ngIf="form.get('titulo').hasError('required')">El campo no debe superar los 10 digitos</p>
+        </div>
+        <div class="field">
+          <label class="label">Mensaje</label>
+          <p class="control">
+            <textarea class="textarea" placeholder="Textarea" placeholder="Ingresa tu mensaje" formControlName="mensaje"></textarea>
+          </p>
+          <p class="help is-success" *ngIf="!form.get('mensaje').hasError('required')">Perfecto!</p>
+          <p class="help is-danger" *ngIf="form.get('mensaje').hasError('required')">El campo no debe superar los 20 digitos</p>
+        </div>
+        <div class="field is-grouped">
+          <p class="control">
+            <button class="button is-primary" [disabled]="form.invalid">Enviar</button>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

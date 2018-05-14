@@ -1,14 +1,206 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Gdg</title>
+  <title>Tarija Segura</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="./assets/css/bulma.css">
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+  <style>
+    .body {
+      position: absolute;
+      width: 98%;
+      height: 98%;
+    }
+
+    .txt-center {
+      text-align: center;
+    }
+
+    .ggl-img {
+      margin-bottom: 30px;
+    }
+
+    .group-bullets {
+      position: relative;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+
+    .bullet {
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      border-radius: 15px;
+      margin-left: 10px;
+
+      -webkit-transform: translate(0%, 0%);
+      transform: translate(0%, 0%);
+      border-radius: 50%;
+    }
+
+    .bullet:first-child {
+      margin-left: 0px;
+    }
+
+    .blue {
+      background: #3498DB;
+    }
+
+    .red {
+      background: #E74C3C;
+    }
+
+    .yellow {
+      background: #F4D03F;
+    }
+
+    .green {
+      background: #2ECC71;
+    }
+
+    /*   Delay - Animation    */
+
+    .bullet:nth-child(1) {}
+
+    .bullet:nth-child(2) {
+      -webkit-animation: bounce 2s ease 0.3s infinite;
+    }
+
+    .bullet:nth-child(3) {
+      -webkit-animation: bounce 2s ease 0.6s infinite;
+    }
+
+    .bullet:nth-child(4) {
+      -webkit-animation: bounce 2s ease 0.9s infinite;
+    }
+
+    .bullet:nth-child(5) {
+      -webkit-animation: bounce 2s ease 1.2s infinite;
+    }
+
+    /*  Bounce   */
+
+    @-webkit-keyframes bounce {
+      0% {
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      50% {
+        -moz-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+      }
+      100% {
+        -moz-transform: translate(0, 0px);
+        -o-transform: translate(0, 0px);
+        -ms-transform: translate(0, 0px);
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-moz-keyframes bounce {
+      0% {
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      50% {
+        -moz-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+      }
+      100% {
+        -moz-transform: translate(0, 0px);
+        -o-transform: translate(0, 0px);
+        -ms-transform: translate(0, 0px);
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+      }
+    }
+
+    @-o-keyframes bounce {
+      0% {
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      50% {
+        -moz-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+      }
+      100% {
+        -moz-transform: translate(0, 0px);
+        -o-transform: translate(0, 0px);
+        -ms-transform: translate(0, 0px);
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        -moz-transform: translate(0, 0);
+        -o-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
+      50% {
+        -moz-transform: translate(0, 20px);
+        -o-transform: translate(0, 20px);
+        -ms-transform: translate(0, 20px);
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+      }
+      100% {
+        -moz-transform: translate(0, 0px);
+        -o-transform: translate(0, 0px);
+        -ms-transform: translate(0, 0px);
+        -webkit-transform: translate(0, 0px);
+        transform: translate(0, 0px);
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <app-root></app-root>
+  <app-root>
+    <div class="body">
+      <div class="group-bullets txt-center">
+        <div class="txt-center ggl-img">
+          <img src="./assets/images/logo.jpg" alt="Google" height="100" width="220" onload="">
+        </div>
+        <div class="blue bullet">
+        </div>
+        <div class="red bullet">
+        </div>
+        <div class="yellow bullet">
+        </div>
+        <div class="green bullet">
+        </div>
+      </div>
+    </div>
+  </app-root>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+<div class="body">
+  <div class="container">
+      <button type="submit" class="btn" (click)="back()" style="margin-top: 20px; ">Regresar</button>
+    <div class="cover">
+      <h1>&lt;Tarija Segura
+        <span class="slash">/</span>&gt;</h1>
+      <h3>Estas a punto de eliminar esta cuenta. al realizar esto no podras recibir ninguna <br> notificacion de esta persona.</h3>
+      <img src="../../assets/images/de.png" alt="" style="max-width: 150px">
+      <p class="help is-success" *ngIf="$message">Perfecto puedes eliminar esta cuenta!</p>
+          <p class="help is-danger" *ngIf="!$message">*No puedes eliminar esta cuenta por q esta siendo utlizada</p>
+          <p class="help is-danger" *ngIf="!$message">*Si deseas quitarla termina la sesion en el disposito de esta cuenta</p>
+          <p class="help is-danger" *ngIf="!$message">*Si deseas quitarla presiona Cerrar sesion</p>
+    </div>
+    <div class="field is-grouped is-grouped-centered" style="margin-top: 20px">
+      <p class="control">
+        <a class="button is-danger" *ngIf="$message" (click)="eliminar()">
+          Eliminar
+        </a>
+      </p>
+      <p class="control">
+        <a class="button is-danger" *ngIf="!$message" (click)="KillSesion()">
+          Cerrar sesion
+        </a>
+      </p>
+      <p class="control">
+        <a class="button is-success" (click)="back()">
+          Cancelar
+        </a>
+      </p>
+    </div>
+    
+  </div>
+</div>

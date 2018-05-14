@@ -1,0 +1,29 @@
+<section class="banner container">
+  <div class="photo-banner">
+    <img src="http://content.assets.pressassociation.io/2017/08/21213132/41ba937c-80a9-47a9-8984-e83191b1ad82.png"
+      alt="Pavel Belodurin">
+  </div>
+  <div class="descr-banner">
+    <h1>&lt;Tarija Segura<span class="slash">/</span>&gt;</h1>
+    <p>Aplicacion de control proporcionado<br>por Seguridad Ciudada de Gobierno<br> Municipal De Tarija<br>Inicia Sesion :).</p>
+    <form novalidate [formGroup]="form" (ngSubmit)="registrar(form.value)" style="width:auto">
+      <div>
+        <input class="input is-primary" type="number" placeholder="Nun Telefono" formControlName="numeros" maxlength="8" [disabled]="activar">
+      </div>
+      <p class="help" *ngIf="form.get('numeros').hasError('required')">Este campo es requerido max(8)*</p>
+      <p class="help" *ngIf="noLetras">Ingrese solo numeros*</p>
+      <div id="recaptcha-container"></div>
+      <button type="submit" class="btn" [disabled]="form.invalid || activar">Iniciar</button>
+    </form>
+    <div *ngIf="confirmacion" style="width:auto">
+      <hr>
+      <label for="code">Ingresa tu codigo de verificacion</label><br>
+      <input class="input is-primary" type="text" name="code" [(ngModel)]="VerificacionCode">
+      <button class="btn" (click)="verifyLoginCode()">Verificar</button>
+    </div>
+  </div>
+</section>
+<div *ngIf="User">
+  You have successfully logged in with your phone number!
+  UserId: {{ user | json }}
+</div>

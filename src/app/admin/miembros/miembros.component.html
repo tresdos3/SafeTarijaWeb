@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="at-section">
+    <div class="at-section__title">Lista de Hijos</div>
+  </div>
+  <div class="columns">
+    <div class="column has-text-centered">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="Buscar Miembro">
+        </p>
+        <p class="control">
+          <a class="button is-info">Buscar</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="at-grid" data-column="3">
+    <div class="at-column">
+      <div class="at-user">
+        <div class="at-user__avatar">
+          <img src="https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-2/512/add_user_group-128.png" />
+        </div>
+        <!-- <div class="at-user__avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" /></div> -->
+        <div class="at-user__name">Agregar nuevo</div>
+        <div class="at-user__title" style="margin: 20px">Agrege a uno de sus hijos para usar el servicio esto tambien lo puede realizar desde el telefono movil</div>
+        <button class="btn" (click)="AgregarNuevo()">Agregar</button>
+      </div>
+    </div>
+    <div class="at-column" *ngFor="let item of $ChildsList">
+      <div class="at-user">
+        <div class="at-user__avatar">
+          <img src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png" />
+        </div>
+        <div class="at-user__name">Nombre: {{ item.nombre }}</div>
+        <div class="at-user__title">Miembro de su familia</div>
+        <button class="btn" (click)="opciones(item)">Ver opciones</button>
+      </div>
+    </div>
+  </div>
+</div>

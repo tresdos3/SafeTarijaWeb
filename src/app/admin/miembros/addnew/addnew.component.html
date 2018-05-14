@@ -1,0 +1,19 @@
+<div class="body">
+  <div class="container">
+    <div class="cover">
+      <h1>&lt;Tarija Segura
+        <span class="slash">/</span>&gt;</h1>
+      <h3>&lt;Agrega a uno de tus hijos :D!
+        <span class="slash">/</span>&gt;</h3>
+      <img src="../../assets/images/a.gif" alt="" style="max-width: 200px">
+      <form class="flex-form" novalidate [formGroup]="form" (ngSubmit)="Registrar(form.value)">
+        <label for="from">
+          <i class="ion-location"></i>
+        </label>
+        <input type="search" placeholder="Nombre del hijo..." formControlName="nombre" maxlength="8">
+        <button type="submit" [disabled]="form.invalid">Iniciar</button>
+      </form>
+      <p class="help" *ngIf="form.get('nombre').hasError('required')">Este campo es requerido max(8)*</p>
+    </div>
+  </div>
+</div>
